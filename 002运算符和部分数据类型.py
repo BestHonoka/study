@@ -17,3 +17,12 @@ print (1!=2)
 x = 10 
 print (x ** 2)
 
+y = 5
+print (float(y))
+
+z = 5.002
+print (int(z))
+
+a = 1 
+b =2
+print (str(a)+str(b))
