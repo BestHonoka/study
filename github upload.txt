@@ -1,3 +1,4 @@
 git add .
 git commit -m "xxxx"
 git push -u origin master
+若失败 git pull origin master
