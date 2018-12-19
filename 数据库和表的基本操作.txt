@@ -1,5 +1,5 @@
 	创建数据库
-create database 数据库名称;
+create database 数据库名称 charset=utf8;
 	查看存在的数据库
 show databases;
 	查看创建好的数据库
