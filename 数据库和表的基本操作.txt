@@ -8,7 +8,10 @@ show create database 数据库名称;
 drop database 数据库名称;
 	修改数据库编码
 alter database 数据库名称 default character set 编码 collate 编码_bin;
-
+	显示当前使用的数据库
+select database();
+	使用数据库
+use 数据库名称;
 	Mysql数据类型
 	整数类型
 tinyint
