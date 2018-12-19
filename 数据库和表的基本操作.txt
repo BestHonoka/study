@@ -14,7 +14,7 @@ smallint
 mediumint
 int
 bigint
-	
+	浮点数定点数类型
 float
 double
 decimal(m,d) #m是数据长度，d是小数点后长度
