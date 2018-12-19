@@ -36,11 +36,11 @@ enum #枚举类型，只能存储一个枚举字符串值
 set
 bit
 	创建数据表
-create table 表名（字段1 数据类型 约束条件，
+create table 表名(字段1 数据类型 约束条件，
                   字段2 数据类型 约束条件，
 				   ...
 		字段n 数据类型 约束条件
-                  ）;
+                  );
 	查看数据表和字符编码
 show create table 表名;		
 	查看表的字段信息
@@ -64,7 +64,7 @@ primary key
 #单字段
 字段名 数据类型 primary key;
 多字段
-primary key（字段名1，字段名2...字段名n）
+primary key(字段名1，字段名2...字段名n)
 每个数据表中最多有一个主键约束，定义为主键的字段不能重复并不能为null
 not null
 #字段名 数据类型 not null;
