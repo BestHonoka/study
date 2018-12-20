@@ -1,12 +1,17 @@
 	创建数据库
-create database 数据库名称;
+create database 数据库名称 charset=utf8;
 	查看存在的数据库
 show databases;
 	查看创建好的数据库
 show create database 数据库名称;
 	删除数据库
 drop database 数据库名称;
-
+	修改数据库编码
+alter database 数据库名称 default character set 编码 collate 编码_bin;
+	显示当前使用的数据库
+select database();
+	使用数据库
+use 数据库名称;
 	Mysql数据类型
 	整数类型
 tinyint
@@ -14,10 +19,10 @@ smallint
 mediumint
 int
 bigint
-	
+	浮点数定点数类型
 float
 double
-decimal(m,d) #m是数据长度，d是小数点后长度
+decimal(m,d) --m是数据长度，d是小数点后长度
 	日期与时间类型
 类型                   格式
 year                   yyyy
@@ -32,15 +37,15 @@ binary
 varbinary
 bolb
 text
-enum #枚举类型，只能存储一个枚举字符串值
+enum --枚举类型，只能存储一个枚举字符串值
 set
 bit
 	创建数据表
-create table 表名（字段1 数据类型 约束条件，
-                   字段2 数据类型 约束条件，
+create table 表名(字段1 数据类型 约束条件，
+                  字段2 数据类型 约束条件，
 				   ...
-				   字段n 数据类型 约束条件
-                  ）;
+		字段n 数据类型 约束条件
+                  );
 	查看数据表和字符编码
 show create table 表名;		
 	查看表的字段信息
@@ -61,17 +66,17 @@ alter table 表名 drop 字段名；
 drop table 表名;
 	表的约束
 primary key 
-#单字段
+--单字段
 字段名 数据类型 primary key;
 多字段
-primary key（字段名1，字段名2...字段名n）
+primary key(字段名1，字段名2...字段名n)
 每个数据表中最多有一个主键约束，定义为主键的字段不能重复并不能为null
 not null
-#字段名 数据类型 not null;
+--字段名 数据类型 not null;
 unique
-#字段名 数据类型 unique;
+--字段名 数据类型 unique;
 唯一约束，表中字段的值不能重复
 default
-#字段名 数据类型 default 默认值;
+--字段名 数据类型 default 默认值;
 	设置表的字段值自动增加
 字段名 数据类型 auto_increment
