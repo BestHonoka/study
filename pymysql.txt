@@ -1,0 +1,13 @@
+from pymysql import*
+def main():
+    conn=connect(host='localhost',port=3306,user='debian-sys-maint',password='QvZ6p6O0qYjha7fi',database='taobao',charset='utf8') #创建对象，调用connect方法
+    cs1 = conn.cursor() #获得cuisor对象，调用connection对象。用于执行sql语句，select，insert，delete，update等
+    count = cs1.execute("select id,name from goods")
+    print("%d条数据:"%count)
+    for i in range (count):
+        result = cs1.fetchone()
+        print(result)
+    cs1.close() #关闭cursor对象
+    conn.close()
+if __name__=='__main__' :
+    main()

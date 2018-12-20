@@ -1,0 +1,52 @@
+	查询
+select 字段名1,字段名2...
+from 表名
+where条件表达式;
+    带and关键字的多条件查询
+select 字段名1,字段名2...
+from 表名
+where 条件表达式1 and 条件表达式2 [...and 条件表达式n];
+	带or关键字的多条件查询
+select 字段名1,字段名2...
+from 表名
+where 条件表达式1 or 条件表达式2 [...or 条件表达式n];	
+	范围查询
+	带in关键字的查询
+select 字段名1,字段名2...
+from 表名
+where 字段名 in[not in] (元素1,,元素2...);
+	带between and关键字的查询
+select 字段名1,字段名2...
+from 表名
+where 字段名 [not] between 值1 and 值2;
+	空值查询
+select 字段名1,字段名2...
+from 表名
+where 字段名 is[not] null;
+	模糊查询
+select 字段名1,字段名2...
+from 表名
+where 字段名 [not] like "匹配字符串"
+--%可以出现在任意位置，可以出现多个。匹配任意长度的字符串 _只能匹配单个字符
+	rlike正则
+select 字段名1,字段名2...
+from 表名
+where 字段名 [not] like "正则表达式"
+--例："^1.*2$"表示以1开头，以2结尾
+order by 字段名 [asc]--升序排列
+order by 字段名 desc--降序排列
+	聚合函数
+select count(*) from 表名[where条件表达式];--统计记录条数
+select sum(字段名) from 表名[where条件表达式];--求出某个字段所有值的和
+select avg(字段名) from 表名[where条件表达式];--求出某个字段所有值的平均数
+select max(字段名) from 表名[where条件表达式];--求出某个字段的最大值
+select min(字段名) from 表名[where条件表达式];--求出某个字段的最小值
+select round(参数1,参数2) from 表名[where条件表达式];--保留参数2的小数位数
+	分组
+--select count(*),字段名 from 表名 [where条件表达式]group by 字段名 having 函数表达式;
+--group_concat(字段名1,"_"字段名2"_"...字段名n)
+	分页
+select 字段名1,字段名2...from 表名 limit 记录数[参数1,参数2]
+--limit 第n页-1*每个的个数 每页的个数
+	从sql文件中导入数据
+source 文件名;
