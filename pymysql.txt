@@ -18,3 +18,12 @@ mydb = mysql.connector.connect(host='localhost',port=3306,user='debian-sys-maint
 cs=mydb.cursor()
 cs.execute("...")
 mydb.commit
+
+
+cursor对象支持的方法
+execute() 执行一个数据库查询和命令
+fetchone() 取得结果集的下一行
+fetchmany(size) 取得结果集的下几行
+fectchall() 取得结果集剩下的所有行
+row.count 最近一次execute返回数据的行数
+close()
