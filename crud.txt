@@ -27,6 +27,7 @@ select 别名.字段名...from 表名 as 别名;
 select distinct 字段名 from 表名;
 where条件表达式;
 	删除数据
+truncate table 表名;
 delete from	表名;
 where条件表达式;(delete中如果没使用where子句，则会将表中的所有记录删除)
 --逻辑删除
