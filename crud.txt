@@ -2,6 +2,8 @@
 	指定字段名
 insert into 表名(字段名1,字段名2...字段名n)
 values(值1,...值n);
+
+insert into 表名 set 字段1=值1，字段2=值2;
 	不指定字段名
 insert into 表名 values(值1,...值n);
 	 多行插入
